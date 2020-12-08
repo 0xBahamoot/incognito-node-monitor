@@ -5,6 +5,11 @@ import (
 	"net/http"
 )
 
+type RequestPayload struct {
+	API  string      `json:"api"`
+	Data interface{} `json:"data"`
+}
+
 func apiHandler(w http.ResponseWriter, r *http.Request) {
 	log.Println(r.URL)
 	if r.URL.Path != "/" {
@@ -17,3 +22,7 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	// http.ServeFile(w, r, "home.html")
 }
+
+type GetNodeInfoPayload struct{}
+
+func getNodeInfo(w http.ResponseWriter, r *http.Request) {}
