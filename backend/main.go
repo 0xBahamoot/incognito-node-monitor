@@ -1,7 +1,12 @@
 package main
 
 func main() {
-	getSystem()
+	// go monitorSystem()
+	// lHub := logHub{
+	// 	hubs: make(map[string]*Hub),
+	// }
+	// _ = lHub
+	readYaml()
 	// var addr = flag.String("addr", ":80", "http service address")
 	// flag.Parse()
 	// fileServer := http.FileServer(http.Dir("./web"))
